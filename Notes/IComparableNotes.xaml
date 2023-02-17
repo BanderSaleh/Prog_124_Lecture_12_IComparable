@@ -1,0 +1,17 @@
+﻿<Window x:Class="Prog_124_Lecture_12_ICompareable.Notes.IComparableNotes"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Prog_124_Lecture_12_ICompareable.Notes"
+        mc:Ignorable="d"
+        Title="IComparableNotes" Height="450" Width="800">
+    <Grid Background="#FF5AA5B7">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition Width="399*"/>
+        </Grid.ColumnDefinitions>
+        <ListBox x:Name="lbStudents" d:ItemsSource="{d:SampleData ItemCount=5}" Grid.Column="1" Margin="188,37,151,37"/>
+
+    </Grid>
+</Window>
