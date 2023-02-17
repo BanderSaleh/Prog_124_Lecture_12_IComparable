@@ -19,25 +19,31 @@ namespace Prog_124_Lecture_12_ICompareable.Notes
     /// </summary>
     public partial class IComparableNotes : Window
     {
+
+        List<Student> studentList = new List<Student>();
+
         public IComparableNotes()
         {
             InitializeComponent();
             Preload();
 
+            //Student_SortGenEdGrade grade = new Student_SortGenEdGrade(Student_SortGenEdGrade.Order.Descending);
+            //students.Sort(grade);
+
             Student_SortGenEdGrade grade = new Student_SortGenEdGrade(Student_SortGenEdGrade.Order.Descending);
 
-            students.Sort(grade);
+            studentList.Sort(grade);
+
             DisplayStudent();
         }
 
-        List<Student> students = new List<Student>();
 
         void Preload()
         {
-            students.Add(new Student("Will", "Cram"));
-            students.Add(new Student("Anne", "Nguyen"));
-            students.Add(new Student("Hannah", "Angel"));
-            students.Add(new Student("Kristyn", "Taniguchi"));
+            studentList.Add(new Student("Will", "Cram"));
+            studentList.Add(new Student("Anne", "Nguyen"));
+            studentList.Add(new Student("Hannah", "Angel"));
+            studentList.Add(new Student("Kristyn", "Taniguchi"));
 
         }
 
@@ -45,7 +51,7 @@ namespace Prog_124_Lecture_12_ICompareable.Notes
         {
             lbStudents.Items.Clear();
 
-            foreach (Student student in students)
+            foreach (Student student in studentList)
             {
                 lbStudents.Items.Add(student);
             }

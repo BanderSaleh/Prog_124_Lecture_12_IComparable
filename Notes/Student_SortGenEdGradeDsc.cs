@@ -35,8 +35,6 @@ namespace Prog_124_Lecture_12_ICompareable.Notes
                 else if (x.GenEdGrade < y.GenEdGrade) return -1;
                 else return 0;
             }
-
-  
         }
     }
 }

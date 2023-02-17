@@ -36,7 +36,7 @@ namespace Prog_124_Lecture_12_ICompareable.Notes
 
         public override string? ToString()
         {
-            return $"{_firstName} {_lastName} - CSI Grade {_csiGrade} - {GenEdGrade}";
+            return $"{_firstName} {_lastName} - CSI Grade {_csiGrade} -  Gen Ed Grade - {GenEdGrade}";
         }
 
     }
