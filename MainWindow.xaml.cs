@@ -51,9 +51,10 @@ namespace Prog_124_Lecture_12_ICompareable
             }
         }
 
+        // Button Click Events that trigger IComparable or IComparer Methods
         private void btnCity_Click(object sender, RoutedEventArgs e)
         {
-            nfl.Sort();
+            nfl.Sort(); //Calls the IComparable method .Sort() to Sort Internal Data
             DisplayNFL();
         }
 
@@ -61,7 +62,7 @@ namespace Prog_124_Lecture_12_ICompareable
         {
             Team_SortName.SortingOrder order = Team_SortName.SortingOrder.Ascending;
             
-            if(!rbAsc.IsChecked.Value)
+            if(!rbAsc.IsChecked.Value) // This gets external data from the user input so we use IComparer Method
             {
                 order = Team_SortName.SortingOrder.Descending;
             }
@@ -74,7 +75,7 @@ namespace Prog_124_Lecture_12_ICompareable
         private void btnBudget_Click(object sender, RoutedEventArgs e)
         {
             Team_SortBudgeDsc budgetDsc = new Team_SortBudgeDsc();
-            nfl.Sort(budgetDsc);
+            nfl.Sort(budgetDsc); 
             DisplayNFL();
         }
 
